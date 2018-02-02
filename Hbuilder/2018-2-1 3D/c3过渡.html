@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+				transition: 1s width,5s 1s height;      /*  ,1s 1s height;先过渡  再延迟一秒     */ 
+			}
+			div:hover{
+				width: 1000px;
+				height: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--css3的过渡		
+		transtion     4个参数   没有顺序
+		过渡时间   单位秒、
+		过渡样式   width height   backgroud
+		过渡的形式ease    逐渐变慢    linear  匀速  。。。。
+		transition-property  要运动的样式  （all || [attr] || none）
+		transition-duration 运动时间
+		transition-delay 延迟时间
+		transition-timing-function 运动形式 
+		
+		
+		ease：（逐渐变慢）默认值
+		linear：（匀速）
+		ease-in：(加速)
+		ease-out：（减速）
+		ease-in-out：（先加速后减速）
+		
+		
+		cubic-bezier 贝塞尔曲线（ x1, y1, x2, y2 ） 
+		
+		-->
+		
+		<div></div>
+	</body>
+</html>

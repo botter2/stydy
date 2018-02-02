@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="new_file.txt" method="get">
+		
+		
+			<!--默认是get方式进行发送-->
+            <!--1.数据通过地址栏进行传输  如果有多条数据通过&的符号进行连接-->
+            <!--2.get方式发送的数据是有大小限制的-->
+            <!--如果超过地址栏的最大长度，会进行截取操作-->
+            <!--3.get方式相对于post来说安全性比较低一些-->
+            
+            <!--post方法传递数据-->
+            <!--1.post传输数据通过请求头方式进行数据的传输-->
+            <!--2.post传输数据的大小理论上是没有限制的-->
+            <!--3.post相对get方式安全性更高一些-->
+			用户名： <input type="text" name="username" />
+			密码： <input type="password" name="pass"  />
+			<input type="submit" />
+			<script type="text/javascript">
+			//同步 前面代码会阻塞后面代码的执行
+			alert（a）；
+			alert（1）；
+			
+			
+//			异步  前面代码不会阻塞后面代码的执行
+			
+			setTimeout(function(){
+				alert(12345);
+			},3000);
+			alert(324325325325);
+		</script>
+			
+			
+		</form>
+	</body>
+</html>

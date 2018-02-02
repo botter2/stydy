@@ -1,0 +1,166 @@
+*{
+	margin: 0;padding: 0;font-size: 12px;color: #444;
+}
+a{
+	text-decoration:none ;
+}
+img{
+	border: none;
+}
+ul,li,ol{
+	list-style: none;
+}
+
+
+#header{
+	width: 100%;
+	height: 135px;
+	overflow: hidden;
+	background: url(../img/top_bg.jpg);
+}
+#header .box{
+	margin: 0 auto;
+	width: 1180px;
+	height: 114px;
+}
+.box img{
+	margin-top: 65px;
+}
+.box ul{
+	margin-top: 84px;
+	width: 460px;
+	height: 30px;
+	float: right;
+}
+.box ul li a{
+	overflow: hidden;
+	font-size: 20px;
+	float: left;
+	color: #006535;
+}
+.box ul span a b{
+	color: #F15921;
+	float: right;
+	font-size: 22px;
+	width: 263px;
+	height: 30px;
+}
+#nav{
+	width: 100%;
+	height: 61px;
+}
+#nav .nav{
+	width: 100%;
+	height: 58px;
+	background:#297C50;
+}
+.nav_s{
+	width: 100%;
+	height:3px;
+	background: #016435;
+}
+
+#nav ul{
+	margin: 0 auto;
+	width: 1180px;
+	height: 58px;
+}
+#nav ul li a{
+	line-height: 58px;
+	color: white;
+	font-size: 16px;
+	width: 163px;
+	height: 58px;
+	float: left;
+	text-align: center;
+}
+.uli{
+	display: none;
+}
+#nav ul li a:hover{
+	border-bottom: 3px solid #E76034;
+	color: #E76034;
+}
+
+
+
+#banner{
+	width: 100%;
+	height: 530px;
+	background: url(../img/img5.jpg) repeat;
+}
+
+#content{
+	border-top: 5px solid #016435;
+	width: 100%;
+	height: auto;
+}
+.con_one{
+	width: 100%;
+	height: 395px;
+	/*margin-bottom: 25px;*/
+}
+.con_ul{
+	text-align: center;
+	margin-top: 50px;
+	width: 100%;
+	height: 90px;
+/*	margin-bottom: 15px;*/
+}
+.con_ul .co_li{
+	font-size: 24px;
+	color: #006535;
+}
+.con_li b{
+	color: #CEE8F0;
+}
+.c_li{
+	margin: 0 auto;
+	width: 70px;
+	height: 5px;
+	background: #A5C8B4;
+}
+.con_one dl{
+	margin: 0 auto;
+	width: 1180px;
+	height: auto;
+}
+.con_one dl dt{
+	margin-right: 40px;
+	float: left;
+	width: 303px;
+	height: 195px;
+	background: url(../img/img_01.png);
+}
+.con_one dl dd{
+	padding-top: 44px;
+	font-size: 14px;
+}
+
+
+.con_two{
+	width: 100%;
+	height: 550px;
+	background: #DFE9DE;
+	padding-top: 20px;
+}
+.cont_ul{
+/*	vertical-align:middle*/
+	text-align: center;
+	width: 100%;
+	height: 90px;
+	padding-bottom: 15px;
+} 
+.cot_li{
+	font-size: 24px;
+	color: #006535;
+}
+.cont_li {
+	color:black;
+}
+.ct_li{
+	margin: 0 auto;
+	width: 70px;
+	height: 5px;
+	background: #A5C8B4;
+}

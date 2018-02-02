@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div")[0];
+//			oDiv.onclick=function(){
+//				console.log("鼠标单击");
+//			}
+//			oDiv.ondblclick=function(){
+//				console.log("鼠标双击")
+//			}
+			oDiv.onmouseover=function(){
+				console.log("亲爱的我爱你")
+			}
+			oDiv.onmouseout=function(){
+				console.log("对不起开玩笑")
+			}			
+			oDiv.onmousemove=function(){
+				console.log("滑动");
+			}
+//			oDiv.onmousedown=function(){
+//				console.log("鼠标按下");
+//			}
+//			oDiv.onmouseup=function(){
+//				console.log("鼠标弹起");
+//			}
+//			oDiv.onmouseenter=function(){
+//				console.log("划入");
+//			}
+//			oDiv.onmouseleave=function(){
+//				console.log("划出");
+//			}
+		</script>
+	</body>
+</html>

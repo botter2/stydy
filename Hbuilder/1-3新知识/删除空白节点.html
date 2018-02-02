@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+    <title>Introduction to the DOM</title>  
+    <script>
+    // We can't manipulate the DOM until the document  
+    // is fully loaded  
+    window.onload = function(){  
+        // Locate the element with an ID of 'everywhere'  
+        var every = document.getElementById( "everywhere" );  
+        // and remove it from the document  
+        var a=every.parentNode;  
+        console.info(a.childNodes[0].nodeType);  
+          
+        cleanWhitespace(a)  
+        console.info(a.childNodes[0].nodeType);  
+        //清除空白函数  
+        function cleanWhitespace(oEelement){  
+            for(var i=0;i<oEelement.childNodes.length;i++){  
+                var node=oEelement.childNodes[i];  
+                if(node.nodeType==3 && /^\s+/.test(node.nodeValue)){  
+                    node.parentNode.removeChild(node)  
+                }  
+            }  
+        }  
+  
+    };  
+  
+      
+    </script>  
+</head>  
+<body>  
+    <h1>Introduction to the DOM</h1>  
+    <p class="test">There are a number of reasons why the DOM is awesome, here are some:</p>  
+    <ul>  
+        <li id="everywhere">It   can be found everywhere.</li>  
+        <li class="test">It's easy to use.</li>  
+        <li class="test">It can help you to find what you want, really quickly.</li>  
+    </ul>  
+</body>  
+</html>  

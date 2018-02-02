@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>行走的DIV</title>
+		<script>
+			window.onload = function() {
+				var aButton = document.getElementsByTagName("input");
+				var oBox = document.getElementById("box");
+				var tmpNum = 20;
+				
+				//向左
+				aButton[0].onclick = function(){
+					var left = numFromStr(oBox.style.left);
+					oBox.style.left = (left-tmpNum) + "px";
+				}
+				//向右
+				aButton[1].onclick = function(){
+					var left = numFromStr(oBox.style.left);
+					oBox.style.left = (left+tmpNum) + "px";
+				}
+				//向上
+				aButton[2].onclick = function() {
+					var top = numFromStr(oBox.style.top);
+					oBox.style.top = (top-tmpNum) + "px";
+				}
+				//向下
+				aButton[3].onclick = function() {
+					var top = numFromStr(oBox.style.top);
+					oBox.style.top = (top+tmpNum) + "px";
+				}
+			}
+			
+			function numFromStr(str){
+				var index = str.indexOf("px");
+				return str.substring(0, index) - 0;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="向左" />
+			<input type="button" value="向右" />
+			<input type="button" value="向上" />
+			<input type="button" value="向下" />
+		</div>
+		
+		<div id="box" style="width: 200px; height: 200px; background-color: red; position: absolute; left: 200px; top: 200px;"> </div>
+		
+
+	</body>
+</html>

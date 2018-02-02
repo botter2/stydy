@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			var btn=document.getElementsByTagName("div")[0];
+			btn.onclick=function(evt){
+				var evt=evt||window.event;
+				console.log(evt);
+//				console.log(evt.screenX);  //鼠标距离屏幕的位置，相对于整个电脑屏幕；
+//				console.log(evt.screenY);
+				console.log(evt.clientX);  //鼠标距离可视窗口的位置；
+				console.log(evt.clientY);
+//				console.log(evt.offsetX);  //鼠标距离元素的位置；
+//				console.log(evt.offsetY);
+//				console.log(evt.pageX); //鼠标距离document的位置；
+//				console.log(evt.pageY);
+			}
+		</script>
+	</body>
+</html>

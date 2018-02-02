@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.box{
+				width: 500px;
+				height: 30px;
+				border: 1px solid #ccc;
+			}
+			.box0{
+				width: 0px;
+				height: 30px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box0"></div>
+		</div>
+		<span>0</span>%
+		<script>
+//			SetInterval(function(){},1000) 开始定时器；
+//			clearInterval（变量）。结束定时器
+//			oDiv.innerHTML 获取标签元素内部全部内容。
+//			oDiv.innerHTML=“<i>xixixi</i>”;修改标签元素的内容。
+			var oDiv0 = document.getElementsByClassName("box0")[0];
+			var span0 = document.getElementsByTagName("span")[0];
+			var i=0;
+			var timer = setInterval(function(){
+				i++;
+				oDiv0.style.width=i*5+"px";
+				span0.innerHTML=i;
+				if(i==100){
+					clearInterval(timer);
+				}
+			},100)
+			alert("开始下载?");
+			
+//			var oDiv = document.getElementsByClassName("box0")[0];
+//			var span0 = document.getElementsByTagName("span")[0];
+//			var i=0;
+//			var timer = setInterval(function(){
+//				i++;
+//				oDiv0.style.width=i*5+"px";
+//				span0.innerHTML=i;
+//				if(i==100){
+//					clearInterval(timer);
+//				}
+//			},100)
+//			alert("开始下载？")
+			
+			
+			
+			
+			
+			
+			
+//			setInterval(function(){
+//				document.write("1");
+//			},1000)  //1000ms等于1秒；
+//			var i=0;
+//			var timer = setInterval(function(){
+//				i++;
+//				document.write(i+"<br/>");
+//				if(i==10){
+//					clearInterval(timer);
+//				}
+//			},1000)
+		</script>
+	</body>
+</html>

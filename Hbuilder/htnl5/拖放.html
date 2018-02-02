@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<ul class="ul1" id="ul2">
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+		</ul>
+		<ul class="ul1" id="ul3">
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+			<li>一梦十年</li>
+		</ul>
+		IE 678 不支持    新增标签也不支持
+		<!--id  class  Tagname  name-->
+		<!----新增的选择器			querySelector(标签  class名  id)   querySelectorAll-->
+		<script type="text/javascript">
+//		querySelector(标签  class名  id)   获取的是单个元素; 
+//		querySelectorAll				获取的是全部元素
+//			var oul=document.querySelector(".ul1");
+//			oul.style.background="red";
+			var oul=document.querySelectorAll('.ul1');
+			for (var i=0;i<oul.length;i++) {
+				oul[i].style.background="red";
+			}
+		</script>
+	</body>
+</html>

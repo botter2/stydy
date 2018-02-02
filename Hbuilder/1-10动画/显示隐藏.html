@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px; height: 100px;
+				background: pink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button>按钮</button>
+		<div></div>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//显示隐藏
+			//隐藏 hide()
+//			$("button").bind("click",function(){
+//				$("div").hide(1000,function(){
+//					alert("看不到我")
+//				})
+//			})
+			//显示 show()
+//			$("button").bind("click",function(){
+//				$("div").show(1000,function(){  
+//					alert("草拟大爷")
+//				})
+//			})
+//			显示隐藏  toggle()
+			$("button").bind("click",function(){
+				$("div").toggle(10)
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				/*border: solid 1px #ccc;*/
+				margin: 0 auto;
+				position: relative;
+			}
+			.box img{
+				width: 300px;
+				height: 300px;
+			/*	border: solid 1px #ccc;*/
+				margin: 0 auto;
+				display: none;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/img_03.jpg"/>
+		</div>
+		<div class="box">
+			<img src="img/img_03.jpg"/>
+		</div>
+		<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div")[0];
+			var oDiv1=document.getElementsByClassName("div")[1];
+			var ig=document.getElementsByTagName("img")[0];
+			var ig1=document.getElementsByTagName("img")[1];
+			oDiv.onmousemove=function(evt){
+				var evt=evt||window.event;
+				var x=evt.offsetX;
+				var y=evt.offsetY;
+				ig1.style.top=y+"px";
+				ig1.style.left=x+"px";
+			}
+			oDiv.onmouseover=function(){
+					ig1.style.display="block";
+			}
+			oDiv.onmouseout=function(){
+					ig1.style.display="none";
+			}
+		</script>
+	</body>
+</html>

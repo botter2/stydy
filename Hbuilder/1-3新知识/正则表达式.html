@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>正则表达式</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var r=new RegExp("box");
+//			alert(r);
+//			var r0=/box/;
+//			alert(r0);
+			
+//			text() : 用于检测一个字符串是否匹配某个模式,返回true则符合， 返回false则不符合;		
+//			var str="abcd xixixi BOx Box box";
+//			var r=/box/;
+//			var c= r.test(str);
+
+//			console.log(c);
+//			console.log(str.replace(/box/ig,"aa"))  ig全局变量
+//			. 元字符，代表除了换行之外的所有单个字符
+//			var str="sfdfs";
+//			var r=/s...s/;
+//			var c=r.test(str);
+//			console.log(c);
+			
+			//重复多次匹配  *号元字符，出现任意次
+//			var str="bx";
+//			var r=/b.*/;
+//			var c=r.test(str);
+//			console.log(c);
+			
+//			[]表示字符可以出现的范围;
+//			var str="aaa  bbb 2 ccc ddd x";
+//			var r=/[0-9]x/;
+//			var c=r.test(str);
+//			console.log(c);
+//			^非       字符串以什么开始
+//			var str="b99x";
+//			var r=/b[^0-9]*x/;
+//			var c=r.test(str);
+//			console.log(c);
+//			+至少有一次;
+//			var str="booooox";
+//			var r=/b[^0-9]+x/;
+//			var c=r.test(str);
+//			console.log(c);
+
+//			\w 等价于[a-zA-Z0-9_]
+//			var str="asad123";
+//			var r=/\w*/;
+//			var c=r.test(str);
+//			console.log(c);
+			
+//			\d  代表数字  等价于[0-9];
+//			var str="2x23";
+//			var r=/^\dx/;    //   字符串以什么开始  
+//			var c=r.test(str);
+//			console.log(c);
+			
+			
+//			$结束
+//			var str = "aaaaaasadsaf";
+//			var r=/d$/;
+//			var c=r.test(str);
+//			console.log(c);
+			
+//			{m,n}   至少m次  之多n次 
+//			{n,}    至少n次,
+//			{n}    只能n次
+//			var str = "a4455667788csadaafa1234";
+//			var r=/a[0-9]{4,6}c/;
+//			var c=r.test(str);
+//			console.log(c);
+
+//			\s 匹配空格
+			var str = "aa bc";
+			var r=/a\sb/;
+			var c=r.test(str);
+			console.log(c);
+
+//			使用或模式匹配: |
+//			var str = "box bcx bzx";p
+//			var r =/bgx|bdx/;
+//			var c = r.test(str);
+//			console.log(c);
+		</script>
+	</body>
+</html>

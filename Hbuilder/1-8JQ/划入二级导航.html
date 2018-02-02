@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0; padding: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			a{
+				color: black;
+				text-decoration:none ;
+			}
+			.ul{
+				float: left;
+				width: 300px;
+				height:100px;
+			}
+			.li1 {
+				float: left;
+				width: 100px; height:100px;
+			}
+			.ul1{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="ul">
+			<li class="li1"><a href="">哈哈</a>
+				<ul class="ul1">
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+					<li><a href="">嘻嘻</a></li>
+				</ul>
+			</li>
+			<li class="li1"><a href="">哈哈</a>
+				<ul class="ul1">
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+					<li><a href="">呵呵</a></li>
+				</ul>
+			</li>
+			<li class="li1"><a href="">哈哈</a>
+				<ul class="ul1">
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+					<li><a href="">哦哦</a></li>
+				</ul>
+			</li>
+		</ul>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			var oUl=document.getElementsByClassName("ul");
+//			var oLi=document.getElementsByClassName("li1");
+//			$(".li1").hover(function(){
+//				$(".ul1",this).slideUp(1000);
+//			},function(){
+//				$(".ul1").eq(a).slideDown(1000);
+//			})
+			$(".li1").hover(function(){
+				var i=$(this).index();
+				$(".ul1").eq(i).stop().slideDown(500);
+			},function(){
+				var i=$(this).index();
+				$(".ul1").eq(i).stop().slideUp(500);
+			})
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		 <!--地理位置    经度    维度-->
+		 <input type="button"  value="地理位置" />
+		 </br>
+		 <textarea name="" rows="10" cols="30"></textarea>
+	</body>
+	<script type="text/javascript">
+		var oinp=document.querySelector('input');
+		var otext=document.querySelector("textarea");
+		oinp.onclick=function(){
+//			alert(123)
+			//地理信息
+			//navgator.geolocation
+//		   三个参数   请求成功的函数   请求失败的函数  数据收集
+//			经度 :  coords.longitude
+//			纬度 :  coords.latitude
+//			准确度 :  coords.accuracy
+//			海拔 :  coords.altitude
+//			海拔准确度 :  coords.altitudeAcuracy
+//			行进方向 :  coords.heading
+//			地面速度 :  coords.speed
+//			时间戳 : new Date(position.timestamp)
+
+			navigator.geolocation.getCurrentPosition(function(){
+				otext.value+='经度：'+Position.coords.longitude+'\n'
+				otext.value+='维度：'+Position.coords.latitude+'\n'
+				otext.value+='准确度：'+Position.coords.accuracy+'\n'
+				otext.value+='海拔：'+Position.coords.altitude+'\n'
+				otext.value+='海拔准确度：'+Position.coords.altitudeAcuracy+'\n'
+				otext.value+='行进方向：'+Position.coords.heading+'\n'
+				otext.value+='地面速度：'+Position.coords.speed+'\n'
+				otext.value+='时间戳：'+new Date(position.timestamp)+'\n'
+			},function(err){
+//				console.log(err.code)
+			},{
+				//延迟加载时间
+				timeout:1000,
+				
+			})         //getCurrentPosition()   具体获取某些信息
+		}
+//					失败编号  ：code
+//					0  :  不包括其他错误编号中的错误
+//					1  :  用户拒绝浏览器获取位置信息
+//					2  :  尝试获取用户信息，但失败了
+//					3  :   设置了timeout值，获取位置超时了
+
+	</script>
+</html>

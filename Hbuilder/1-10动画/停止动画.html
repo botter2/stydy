@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px; height: 100px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<button>开始</button>
+		<button>结束</button>
+		<button>结束所有动画</button>
+		<button>结束运行动画</button>
+		<div></div>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("button").eq(0).click(function(){
+				$("div").animate({"width":"200px"},2000)
+				$("div").animate({"height":"200px"},2000)
+			})
+			$("button").eq(1).click(function(){  //结束当前运动，执行下一运动
+				$("div").stop(false,false);
+			})
+			$("button").eq(2).click(function(){ // 结束所有运动
+				$("div").stop(true,false);
+			})
+			$("button").eq(3).click(function(){  //快速结束当前运动
+				$("div").stop(false,true); 
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+			p{
+				background: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>哈哈哈哈</p>
+			<button>点击</button>
+		</div>
+		<span></span>
+		
+		<script type="text/javascript">
+//			addEventListener() 方法用于向指定元素添加事件句柄.
+			var oDiv=document.getElementsByTagName("div")[0];
+			var op=document.getElementsByTagName("p")[0];
+			var opan=document.getElementsByTagName("span")[0];
+			var btn=document.getElementsByTagName("button")[0];
+//			op.addEventListener("click",function(){
+//				alert("1");
+//			})
+//			op.addEventListener("click",function(){
+//				alert("2");
+//			})
+//			oDiv.addEventListener("click",buhuo,true);
+//			op.addEventListener("click",buhuo0,true);
+//			function buhuo(){
+//				alert("捕获阶段div");
+//			}
+//			function buhuo0(){
+//				alert("捕获阶段p")
+//			}
+//			oDiv.addEventListener("click",maopao,false);
+//			op.addEventListener("click",maopao0,false);
+//			function maopao(){
+//				alert("冒泡阶段div");
+//			}
+//			function maopao0(){
+//				alert("冒泡阶段p");
+//			}
+			
+//			使用removeEventListener()   方法移除由addEventListener()  方法添加的事件句柄
+
+//			oDiv.addEventListener("mousemove",my);
+//			function my(){
+//				opan.innerHTML=Math.random();
+//			}
+//			btn.onclick=function(){
+//				oDiv.removeEventListener("mousemove",my);
+//			}
+			组织事件流  window.event? window.event.cancelBubble = true : e.stopPropagation();
+			
+
+
+
+		</script>
+	</body>
+</html>

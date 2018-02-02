@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--永久化存储-->
+		<!--临时存储-->
+		<button id="btn1">设置</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.querySelector("#btn1");
+		
+		btn.onclick=function(){
+	//永久化		localStorage
+			window.localStorage.name='syx';
+		}
+		
+		sessionStorage
+		session临时回话，从页面打开到页面关闭的时间段
+		窗口的临时存储，页面关闭，本地存储消失
+		localStorage
+		永久存储（可以手动删除数据）
+	</script>
+</html>

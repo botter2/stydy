@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<p class="one">请选出你最喜欢的一个水果</p>
+		<p class="one">请选出你最喜欢的一个水果</p>
+		<ul>
+			<li>苹果</li>
+			<li class="a">橘子</li>
+			<li class="a">香蕉</li>
+		</ul>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//1.查找节点/元素节点
+			//2.元素节点
+//		var $pa=$("one");//先获取名为.aa的class类名
+//		var $p_a=$pa.attr("class");  //attr()获取变量$pa的class属性值
+//		console.log($attr);
+//		var $attr=$box.attr("class","two");
+//		3).文本节点
+//		var $box=$("p")
+//		var txt=$box.text();
+//		console.log(txt);
+//		$box.txt("hahahaahaha")
+
+		//创建节点
+//		var li1=$("<li>苹果</li>");
+//		var li2=$("<li>芒果</li>");
+//		var li3=$("<li>香蕉</li>");
+//		var li4=$("<li>橙子</li>");
+//		var li5=$("<li>梨子</li>");
+//		console.log(li1);
+		//添加节点
+//		$("ul").append(li1,li2,li3,li4,li5);
+//		appendTo
+//		li1.appendTo($("ul"));
+//		prepend
+//		$("ul").prepend(li1).prepend(li2);
+//		$('ul').prepend(li1,li2)
+		//prependTo()
+//		li1.prependTo($("ul"))
+//		var $p=$("p");   //插入平级节点后面
+//		var strong=$("<strong>快手</strong>");
+//		$p.after(strong);
+//		//insertAfter
+//		strong.insertAfter($p);
+		//before()
+		//insertBefore
+		//移除节点
+		//remove()
+//		var $li=$("ul li:eq(0)");
+//		console.log($li);
+//		$($li).remove();
+//		
+//		$li.click(function(){
+//			alert("1");
+//		})
+//		$li.remove();
+//		$("ul").append($li);
+//		
+//		//detach()方法     删除后  绑定事件还在
+//		$li.detach();
+//		var $li=$("ul li:eq(0)");
+//		console.log($li);
+//		$li.click(function(){
+//			alert("1");
+//		})
+//		$li.detach();
+//		$("ul").append($li);
+//		remove() 和detach()  的不同
+
+
+//		empty()方法   清空节点
+//		$("ul").empty()
+ 	  	
+		//克隆节点   clone()
+//		var clone=$("ul li").eq(0).clone();
+//		console.log(clone);
+//		$("ul").append(clone)
+		
+		$("ul li").eq(0).click(function(){
+			$(this).clone(true).appendTo("ul")
+		})
+		
+		
+//		替换节点   replaceWith()和replaceAll()
+		var $s=$("<strong>请选出你最喜欢的一个水果</strong>");
+		$("p").replaceWith($s);
+		$s.replaceAll(".one")
+		
+		//包裹节点
+		//wrap()    给每个p包裹一个b标签
+		$("p").wrap("<b></b>");
+		//wrapAll()      将所有的p用b标签包裹起来
+		$("p").wrapAll("<b></b>");
+		//wrapInner()    //包裹住p里面的内容
+		$("p").wrapInner("<b></b>");
+		</script>
+	</body>
+</html>

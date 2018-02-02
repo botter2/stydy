@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.left{
+				width: 425px;
+				height: 328px;
+				float: left;
+				position: relative;
+			}
+			.cover{
+				display: inline-block;
+				width: 212px;
+				height: 164px;
+				background: yellow;
+				opacity: 0.5;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.right{
+				width: 425px;
+				height: 328px;
+				float: left;
+				overflow: hidden;
+				position: relative;
+				display: none;
+			}
+			.right>img{
+				width: 850px;
+				height: 656px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left"><img src="img/18204783.jpg"/><span class="cover"></span></div>
+		<div class="right"><img src="img/18204783.jpg"/></div>
+		<script type="text/javascript">
+			var left=document.getElementsByClassName("left")[0];
+			var cover=document.getElementsByClassName("cover")[0];
+			var right=document.getElementsByClassName("right")[0];
+			var oImg=document.getElementsByTagName("img")[1];
+			left.onmouseover=function(){
+				cover.style.display="block";
+				right.style.display="block";
+			}
+			left.onmouseout=function(){
+				cover.style.display="none";
+				right.style.display="none";
+			}
+			left.onmousemove=function(evt){
+				var evt=evt||window.event;
+//				console.log(cover.style.left);
+				var x=evt.clientX-55;
+				var y=evt.clientY-55;
+				if(x<=0){
+					x=0;
+				}
+				if(x>=212){
+					x=164;
+				}
+				if(y<=0){
+					y=0;
+				}
+				if(y>=212){
+					y=164;
+				}
+				cover.style.left=x+"px";
+				cover.style.top=y+"px";
+				oImg.style.left=-x*2+"px";
+				oImg.style.top=-y*2+"px";
+			}
+		</script>
+	</body>
+</html>

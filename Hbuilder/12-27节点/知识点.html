@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box" title="ddd" name="aaa"><em>ssss</em></div>
+		
+		
+		<script type="text/javascript">
+			//元素节点获取
+			var odiv=document.getElementsByTagName("div")[0];
+			//属性节点获取
+			console.log(odiv.title);
+			console.log(odiv.name);
+			console.log(odiv.className);
+			//文本节点获取
+			console.log(odiv.innerHTML);  //获取全部内容   识别里面的标签
+			console.log(odiv.innerText);  //获取文本内容   不识别里面的标签
+			
+			odiv.innerHTML="<a href='#'>bbbb</a>";
+			odiv.innerText="<a href='#'>bbbb</a>";
+			//获取指定属性的值   getAttribute()
+			console.log(odiv.getAttribute("name"));
+			//设置指定属性的值   setAttribute("属性名","属性值")
+			odiv.setAttribute("bb","nn");
+			//移除属性     removeAttribute();
+			odiv.removeAttribute("bb");
+		</script>
+
+
+<!--<div>ahaha</div>-->
+		<div class="box">
+			hahah       
+			<span>lalala</span>
+			<em>gegege<i>jjjjjj</i></em>
+		</div>
+		<script type="text/javascript">
+//			var odiv=document.getElementsByTagName("div")[0];
+//			console.log(odiv.nodeName);          //节点名称
+//			console.log(odiv.childNodes[0].nodeType);//节点类型   元素  1    文本 3
+//			console.log(odiv.childNodes[0].nodeValue);//节点值      不取值显示null
+            var bo=document.getElementsByClassName("box")[0];
+//          console.log(bo.childNodes);
+           // /ildNodes 可以获取一个元素的所有节点，只获取儿子辈
+            
+            //firstchild   取第一个子节点    lastchild  取最后一个子节点
+            //parentNode   父节点
+            
+            //ownerDocument   返回当前对象的根节点
+            //nextSibling      previousSibling    同级的上一个节点和下一个节点
+            
+//          console.log(bo.childNodes[1].nextSibling);
+//          var a=document.createElement("p");    //创建一个节点    createElement();
+//          a.innerText="ggggg"               //给创建的节点添加内容
+//          
+//          bo.appendChild(a);              //给某个节点 添加一个新的子节点 
+            
+            //insertBefore(参数1，参数2)；    在某个节点前添加一个节点   兄弟关系
+            //父节点.insertBefore(参数1，参数2);
+            var pp=document.createElement("p");
+            pp.innerText="sssssss";
+            bo.insertBefore(pp,bo.childNodes[3]);
+            
+            //createTextNode();  创建文本节点
+            
+            var tt=document.createTextNode("文本节点");
+            //bo.appendChild(tt);
+            
+            //replaceChild(参数1，参数2);   替换节点     参数1 替换参数2
+            
+            
+            bo.replaceChild(tt,pp);
+            
+            
+            
+            
+            
+            
+            
+            
+            //insertBefore(参数1，参数2)；    在某个节点前添加一个节点   兄弟关系
+            //父节点.insertBefore(参数1，参数2);
+            var pp=document.createElement("p");
+            pp.innerText="sssssss";
+            bo.insertBefore(pp,bo.childNodes[3]);
+            
+            //createTextNode();  创建文本节点
+            
+            var tt=document.createTextNode("文本节点");
+            //bo.appendChild(tt);
+            
+            //replaceChild(参数1，参数2);   替换节点     参数1 替换参数2
+            
+            
+            bo.replaceChild(tt,pp);
+            
+            //removeChild();删除节点
+            
+            bo.removeChild(bo.childNodes[0]);
+            
+            //cloneNode();      克隆节点
+            //cloneNode(false);  默认false 只复制 标签      cloneNode(true);  复制  全部内容
+            
+            var cc=bo.cloneNode(true);
+            console.log(cc);
+            bo.appendChild(cc);
+		</script>
+
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p class="one">请选出你最喜欢的一个水果</p>
+		<p class="one">请选出你最喜欢的一个水果</p>
+		<ul>
+			<li>苹果</li>
+			<li class="a">橘子</li>
+			<li class="a">香蕉</li>
+		</ul>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			获取属性和设置属性;
+//			如果要获取<p>元素的属性title, 只需给attr()方法传递一个参数,及属性名称.
+			var $para = $("p");			//获取P节点；
+			var p_txt = $para.attr("title");    //获取P元素节点属性title；
+			console.log("p")
+			
+//			$("p").attr("title" , "your title"); //设置单个的属性值
+
+			$("p").attr({"title" : "your title" , "name": "test" }); 
+			//将一个“名/值”形式的对象设置为匹配元素的属性         一次性为同个元素设置多个属性；
+		</script>
+	</body>
+</html>

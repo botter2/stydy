@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<span></span>
+			<div></div>
+			<p></p>
+		</div> 
+		<script type="text/javascript">
+			var odiv=document.getElementsByClassName("box")[0];
+			for (var i=0;i<odiv.childNodes.length;i++){
+//				var c=odiv.childNodes[i];
+//				var a=/^\s+$/;
+//				var b=a.test(c.nodeValue);
+				if(odiv.childNodes[i].nodeType==3&&/^\s+$/.test(odiv.childNodes[i].nodeValue)){
+					odiv.removeChild(odiv.childNodes[i]);
+				}
+			}console.log(odiv.childNodes)
+		</script>
+	</body>
+</html>

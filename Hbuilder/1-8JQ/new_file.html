@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0; padding: 0;
+			}
+			.box{
+				width: 300px;
+				height: 300px;
+				border: #333 solid 1px;
+				background: #CCCCCC;
+				float: left;
+				margin: 3px;
+			}
+			.box>div{
+				width: 80px; height: 80px;
+				background: #ccc;
+				border: #333 solid 2px;
+				float: left;
+				margin: 5px;
+			}
+			.mini{
+				width: 40px; height: 40px;
+				background: #ccc;
+				border: solid #333 1px;
+				float: left;
+				margin: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="min_one"></div>
+			<div class="min_two"></div>	
+		</div>
+		<div class="box">
+			<div class="min_one">1</div>
+			<div class="min_two">1</div>	
+		</div>
+		<div class="box">
+			<div class="min_one">1</div>
+			<div class="min_two">1</div>	
+		</div>
+		<div class="box">
+			<div class="min_one">
+				<div class="mini">1</div>
+			</div>
+			<div class="min_two">1</div>	
+		</div>
+		<div class="box">
+			<div class="min_one"></div>
+			<div class="min_twos"></div>	
+			<div class="min_twos"></div>	
+		</div>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			子选择器
+//			$("div>.min_one").css("background","red");
+			//选取min_one的下一个兄弟min_two元素，同一个父级后面的同辈元素；只能是亲兄弟；
+//			$(".min_one+.min_two").css("background","red");
+//			选取class为min_one的元素后面的所有.min_twos元素,只能是亲兄弟;
+//			$(".min_one~.min_twos").css("background","yellow");
+			$(".box").first().css("background","red");			
+//			$(".box:first").css("background","red");
+//			$(".box:last").css("background","red");
+			$("div:not(.box)").css("background","saddlebrown");
+			
+			$(".min_one:eq(0)").css("background","aqua")
+			$(".min_one").eq(1).css("background","aquamarine");
+			
+//			:even  偶数索引   :odd   奇数索引
+//			:gt(index)  大于index的 
+//			:lt(index)  小于index的			
+			$(".box:odd").css("background","red")
+			//			$(".box:even").css("background","red")
+//			没有任何子元素,包括文本元素的div
+//			$("div:empty()").css("background","blue")
+//			拥有子元素,文本元素的DIV
+			$("div:parent()").css("background","navy");
+			$("div:has(.mini)").css("background","darkviolet")
+		</script>
+	</body>
+</html>

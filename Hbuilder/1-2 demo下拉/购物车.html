@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0 ; padding: 0;
+			}
+			div{
+				width: 150px;
+				height: 150px;
+			}
+			div>img{
+				width: 150px;
+				height: 150px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/a000.jpg"/ style="top: 0px;">
+		</div>
+		<a href="https://www.baidu.com/">加入购物车</a>
+		<script src="js/startMove.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var img=document.getElementsByTagName("img")[0];
+			var a=document.getElementsByTagName("a")[0];
+			var div=document.getElementsByTagName("div")[0];
+			a.onclick=function(e){
+				var e=e||window.event;
+				if(e.preventDefault){
+					e.preventDefault();
+				}else{
+					e.returnValue=false;
+				}
+				var img=document.getElementsByTagName("img")[0];
+				startMove(img,{right:0,height:0,width:0},function(){
+					div.removeChild(img);
+				})
+				var i=document.createElement("img");
+				i.src="img/a000.jpg";
+				div.appendChild(i);
+			}
+//			oA.onclick=function(evt){
+//				var evt=evt||window.event;
+//				var oImg=document.getElementsByTagName("img")[0];
+//				startMove(oImg,{width:0,height:0,left:1400},function(){
+//					oDt.removeChild(oImg);
+//				});
+//				var img=document.createElement("img");
+//				img.src="/img/a000.jpg";
+//				oDt.appendChild(img);
+//				e.preventDefault();
+//			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<div class="box" style="width: 200px; height: 200px; background: red;">
+			<div class="box0" style="width: 100px; height: 100px; background: yellow;">
+				<div class="box01" style="width: 50px; height: 50px; background: gold;">
+					
+				</div>
+			</div>
+		</div>-->
+		<a id="aa" href="https://www.baidu.com">百度</a>
+		<script type="text/javascript">
+//			组织事件流  window.event? window.event.cancelBubble = true : e.stopPropagation();
+//			var box=document.getElementsByClassName("box")[0];
+//			var box0=document.getElementsByClassName("box0")[0];
+//			var box01=document.getElementsByClassName("box01")[0];
+//			box.onclick=function(){
+//				window.event? window.event.cancelBubble = true : e.stopPropagation();
+//				alert("box");
+//			}
+			
+//			box0.onclick=function(){
+//				alert("box0");
+//			}
+//			box01.onclick=function(){
+//				alert("box01");
+//			}
+			window.onload=function(){
+				var oA=document.getElementsByTagName("a");
+				var oA=document.getElementById("aa");
+			oA.onclick=function(e){
+//				e.preventDefault()    //谷歌
+//				e.returnValue=false;  //IE
+				var e=e||window.event;
+				alert("1");
+				if (e.preventDefault) {it
+					e.preventDefault();
+				} else{
+					e.returnValue=false;
+				}
+			}
+		}
+				
+		</script>
+	</body>
+</html>

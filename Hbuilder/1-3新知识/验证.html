@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			.box{
+				border: solid 1px #ccc;
+				width: 800px;
+				height: 505px;
+				margin: 100px auto;
+			}
+			.box ul li{
+				line-height: 100px;
+				width:800px;
+				height: 100px;
+				border-bottom: 1px solid #ccc;
+			}
+			.input1,.input2,.input3,.input4{
+				border: solid 1px #ccc;
+				outline: none;
+			}
+			.span1,.span2,.span3,.span4{
+				font-size: 14px;
+				color: #ccc;
+				/*display: none;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li>账户名：   <input type="text" value=""  class="input1"/>
+				<span class="span1"></span></li>
+				<li>登录密码： <input type="text" value=""  class="input2"/>
+				<span class="span2"></span></li>
+				<li>确认密码： <input type="text" value=""  class="input3"/>
+				<span class="span3"></span></li>
+				<li>验证码：   <input type="text" value=""  class="input4"/>
+				<span class="span4"></span></li>
+				<li> <button>登录</button> </li>
+		</ul>
+		</div>
+		
+		<script type="text/javascript">
+			var oDiv=document.getElementsByClassName("box")[0];
+			var oUl=document.getElementsByTagName("ul")[0];
+			var oLi=document.getElementsByTagName("li")[0];
+			var ipt1=document.getElementsByClassName("input1")[0];
+			var ipt2=document.getElementsByClassName("input2")[0];
+			var ipt3=document.getElementsByClassName("input3")[0];
+			var ipt4=document.getElementsByClassName("input4")[0];
+			var spa1=document.getElementsByClassName("span1")[0];
+			var spa2=document.getElementsByClassName("span2")[0];
+			var spa3=document.getElementsByClassName("span3")[0];
+			var spa4=document.getElementsByClassName("span4")[0];
+			
+			ipt1.onfocus=function(){
+				
+				ipt1.style.borderColor="deepskyblue";
+				spa1.innerHTML="请输入您的手机号";
+			}
+			ipt1.onblur=function(){
+				var pattern = /^1[3|4|5|7|8]\d{9}$/;
+				var c=ipt1.value;
+				var a=pattern.test(c);
+				if (a==true){
+					spa1.innerHTML="正确";
+					ipt1.style.borderColor="";
+				} else{
+					spa1.innerHTML="请输入正确的手机号"
+					ipt1.style.borderColor="red";
+				}
+//				spa1.innerHTML=""
+//				
+			}
+			ipt2.onfocus=function(){
+				ipt2.style.borderColor="deepskyblue";
+				spa2.innerHTML="6-20为字符，可使用，数字、字母、下划线。";
+			}
+			ipt2.onblur=function(){
+				var pattern1 = /^[a-zA-Z_][a-zA-Z0-9_]{5,14}/;
+				var ip2=ipt2.value;
+				var b=pattern1.test(ip2);
+				if (b==true){
+					spa2.innerText="正确";
+					console.log(spa2)
+					console.log(spa2.innerHTML);
+					ipt2.style.borderColor="";
+				} else{
+					spa2.innerHTML="请输入正确的密码";
+					ipt2.style.borderColor="red"
+				}
+//				spa2.innerHTML=""
+				
+			}
+			ipt3.onfocus=function(){
+				ipt3.style.borderColor="deepskyblue";
+				spa3.innerHTML="请再次输入密码";
+			}
+			ipt3.onblur=function(){
+				var pattern3 = /^\w+$/;
+				var ip3=ipt3.value;
+				var c=pattern3.test(ip3);
+				spa3.innerHTML=""
+				ipt3.style.borderColor="";
+			}
+			ipt4.onfocus=function(){
+				ipt4.style.borderColor="deepskyblue";
+				spa4.innerHTML="请输入验证码";
+			}
+			ipt4.onblur=function(){
+				spa4.innerHTML=""
+				ipt4.style.borderColor="";
+			}
+		</script>
+	</body>
+</html>

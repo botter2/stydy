@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box1  box2 box3" id="box">fsasa</div>
+	</body>
+	<script type="text/javascript">
+		var odiv=document.querySelector('#box');
+//		odiv.classList    获取class名的集合；
+//		add 添加clas方法
+		odiv.classList.add('box4')
+		console.log(odiv.classList);
+//		toggle  切换class    元素本身有该class名就删除,没有就加上
+		odiv.classList.toggle('box1')
+	</script>
+</html>

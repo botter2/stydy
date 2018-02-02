@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0; padding: 0;
+			}
+			div{
+				width: 100px; height: 100px;
+				background: #ccc;
+				margin: 5px;
+				float: left;
+			}
+			
+			/*.boss{
+				display: none;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="box"<!-- id="hhh"--></div>
+		<div class="boss"></div>
+		<div class="bo"></div>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			$("div:visible").css("background","red");  //可见
+//			$(".boss").css("display","block");
+//			$("div:hidden").css("background","yellow");  //不可见
+//			$(".boss").css("display","block");
+
+			$("div[id]").css("background","aqua");
+			
+			选取box的第一个孩子(index|even|odd)
+			$(".box :first-child").css("background","red");
+			$(".box :last-child").css("background","yellow");
+			$(".box:only-child").css("background","red")
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			input[type=text]{
+				background: red;
+			}
+			input[type=syx]{
+				background: black;
+			}
+			input[value^=s]{
+				background: pink;
+			}
+			input[value$=a]{
+				background: yellow;
+			}
+			input[value*=syx]{
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			=          就是完全等于
+			^=         以什么开始
+			$=         以什么结束
+			*=  	   包含 
+		-->
+		<input type="text "value="syx" />
+		<input type="text "value="syx1" />
+		<input type="text "value="syeqwx2a" />
+		<input type="text "value="sqweyx3a" />
+		<input type="text "value="syqweqx4" />
+		<input type="password" />
+	</body>
+</html>

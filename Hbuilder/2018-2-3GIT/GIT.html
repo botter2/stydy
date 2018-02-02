@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--
+		git    储存在本地电脑
+		 版本
+		 管理工具
+		 
+		 svn  管理工具   集中式的管理
+		 
+		 
+		 分三个区    工作区   暂存区   版本库 
+		 
+		 从工作区上传到暂存区  指令  git  add(添加)    文件名；  
+		 查看git的状态   指令  git   status；
+		 工作区文件 红色   暂存区文件 绿色
+		 从暂存区 上传到版本库    git    commit -m "文件描述"；   点.  提交修改过的文件
+		 从工作区  直接到版本库的指令（提交已经提交过的文件（之前被修改的））     git commit -a -m “文件描述”
+		 
+		 
+		 git  diff   		 工作区与暂存区的差异对比
+		 git diff --cached   暂存区与版本库的差异对比
+		 git diff master（分支）   工作区与版本库进行差异对比
+		-->
+		<!--
+			
+		GitHub   需要联网    储存在网络上  基友平台
+		
+		
+		1.git  init 
+		2.检查状态   git status 
+		3.提交到暂存区  git add 1.text
+		
+		
+		5.重置  撤销   git reset HEAD  文件名 
+		
+		git  config --global user.name （最好的github上的名字一样）
+		git  config --global user. email  最好的github上的名字一样）
+		
+		git checkout   --<file.name>    版本库替换工作区的文件
+			
+		git commit  --amend   将上次提交的内容与本次提交的内容合并
+		
+		格式：：：git commit -m "one and two" -amend 
+		
+		
+		
+		-->
+		git rm -f <file.name>
+			如果工作区和暂存区都有的话，全部进行删除
+			
+			
+		git rm --cached <file.name>
+			(如果工作区和暂存区都有的话，只删除暂存区，保留工作区)
+			
+		git checkout commit_id <file.name>
+			将误删的工作区的文件进行恢复（commit_id  不用全部写全，截取一部分就可以）
+			
+			
+			git remote  查看远程仓库的名字
+			
+			git push gitone master   添加到GitHub上    gitone是在GitHub上的名字
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			div{
+				width: 100px; height: 100px;
+				background: pink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button>按钮</button>
+		<div></div>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//滑入滑出
+		//slideUp();    滑入
+//		$("button").bind("click",function(){
+//				$("div").slideUp(2000)
+//			})
+		//slideDown();   滑出
+//		$("button").bind("click",function(){
+//				$("div").slideDown(2000)
+//			})
+		//slideToggle()   滑入滑出
+		$("button").bind("click",function(){
+				$("div").slideToggle(2000)
+			})
+		</script>
+	</body>
+</html>

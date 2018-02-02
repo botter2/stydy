@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+/*			-webkit-filter:grayscale(1);*/	
+		img{
+		/*/*灰度*/	-webkit-filter:grayscale(1);
+				-webkit-filter: sepia(1);
+				-webkit-filter: saturate(0.5);
+				-webkit-filter: hue-rotate(90deg);
+				-webkit-filter: invert(1);
+				-webkit-filter: brightness(1);
+		/*/*对比度*/	/*-webkit-filter: contrast(2);*/
+		/*模糊度*/	-webkit-filter: blur(10px);
+					-webkit-filter: drop-shadow(5px 5px 5px #ccc);
+			}
+		</style>
+	</head>
+	<body>
+		<!--滤镜-->
+		<img style="width: 300px; height: 600px;" src="img/5 (2).jpg"/>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+//			var list={
+//				"name":"zhangsan",
+//				"sge":"18"
+//			}
+			var oDiv=document.getElementsByTagName("div")[0];
+//			oDiv.innerHTML=list.name;
+
+			var list={
+				"pinzhong":"renlei",
+				"xixi":[
+					{"name":"zhangsan","age":"18"},
+					{"name":"sisi","age":"18"},
+					{"name":"zizi","age":"18"},
+					{"name":"lili","age":"18"}	
+				]
+			}	
+			oDiv.innerHTML=list.xixi[2].name;
+		</script>
+	</body>
+</html>

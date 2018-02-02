@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px; height: 100px;
+				background: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<button>追加class类</button>
+		<p class="one">你最喜欢的水果是?</p>
+		<p class="one">你最喜欢的水果是?</p>
+		<ul style="width: 200px; border: #ccc solid 1px;">
+			<li>苹果</li>
+			<li class="a">橘子</li>
+			<li class="a">香蕉</li>
+		</ul>
+		
+		<!--<input type="text" id="ipt" value="请输入邮箱地址"/>
+		<input type="text" id="password" value="请输入邮箱密码"/>-->
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			$("p").bind("click",function(){ //toggle()，交替一组动作
+//				 $(this).toggleClass("red");
+//				}) 
+
+//		$("#ipt").focus(function(){ 
+//			 var txt_value = $(this).val(); //获取地址文本框的值
+//			 if(txt_value=="请输入邮箱地址"){ 
+//			 $(this).val(""); 
+//			 } 
+//			 }); 
+//		$("#address").blur(function(){ 
+//			 var txt_value = $(this).val(); //获取地址文本框的值
+//			 if(txt_value==""){ 
+//			 $(this).val("请输入邮箱地址"); 
+//			 } 
+//			}) 
+//			$("button").bind("click",function(){
+//				$("ul").slideUp(1000)
+//			})
+//			$("button").bind("click",function(){
+//				$("ul").slideDown(1000)
+//			})
+////			二级导航点击显示隐藏
+//			$("button").bind("click",function(){
+//				$("ul").slideToggle(1000)
+//			})
+//			
+			$("button").hover(function(){
+				$("ul").slideUp();
+			},function(){
+				$("ul").slideDown();
+			})
+		</script>
+	</body>
+</html>

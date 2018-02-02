@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" placeholder="请登录"/>
+		<input type="password" placeholder="密码" />
+		<button>登录</button>
+		<script type="text/javascript">
+			var inp=document.getElementsByTagName("input")[0];
+			var ipt=document.getElementsByTagName("input")[1];
+			var btn=document.getElementsByTagName("button")[0];
+			var a;
+			var b;
+			btn.onclick=function(){
+				a=inp.value;
+				b=ipt.value;
+				alert("用户名："+a+"密码："+b);
+			}
+			
+		</script>
+	</body>
+</html>

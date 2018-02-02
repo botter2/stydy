@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul,li{list-style: none;}
+			dt{
+				width: 200px;
+				height: 200px;
+				position: relative;
+			}
+			dt img{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<dl>
+			<dt><img class="a" src="img/a000.jpg"/></dt>
+			<dd><a href="#">加入购物车</a></dd>
+		</dl>
+		<script src="js/startMove.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oA=document.getElementsByTagName("a")[0];
+			var oImg=document.getElementsByTagName("img")[0];
+			var oDt=document.getElementsByTagName("dt")[0];
+			oA.onclick=function(evt){
+				var evt=evt||window.event;
+				var oImg=document.getElementsByTagName("img")[0];
+				startMove(oImg,{width:0,height:0,left:1400},function(){
+					oDt.removeChild(oImg);
+				});
+				var img=document.createElement("img");
+				img.src="img/a000.jpg"
+				oDt.appendChild(img);
+				e.preventDefault();
+			}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//			var oDt=document.getElementsByTagName("dt")[0];
+//			var oA=document.getElementsByTagName("a")[0];
+//			var oImg=document.getElementsByTagName("img")[0];
+//			oA.onclick=function(){
+//				var oImg=document.getElementsByTagName("img")[0];
+//				startMove(oImg,{width:0,height:0,left:1400},function(){
+//					oDt.innerHTML="";
+//					var img=document.createElement("img");
+//					img.src="15.jpg";
+//					oDt.appendChild(img);
+//					console.log(oImg)
+//				})
+//				var img=document.createElement("img");
+//				img.src="15.jpg";
+//				oDt.appendChild(img);	
+//			}
+
+
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0; padding: 0;
+			}
+			div,p,span{
+				display: block;
+				width: 100px;
+				height: 100px;
+				float: left;
+				background: #ccc;
+				border: solid 2px #333;
+				margin: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">id为box</div>
+		<div class="box">class为box</div>
+		<span>span</span>
+		<p>p</p>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			//基本选择器
+			//元素选择器
+			$("p").css("background","red");
+			$("#box").css("background","yellow");
+			$(".box").css("background","pink");
+			$("span").css("background","greenyellow");
+			$("*").css("border-color","black")
+			
+			//群组
+			$("p,span").css("color","white");
+		</script>
+	</body>
+</html>

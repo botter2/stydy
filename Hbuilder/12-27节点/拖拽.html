@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		
+		
+		
+		<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div")[0];
+			
+			oDiv.onmousedown=function(evt){   //鼠标点下时   获取鼠标的位置
+				var evt=evt||window.event;
+				var y=evt.offsetY;
+				var x=evt.offsetX;
+				
+				document.onmousemove=function(evt){  //鼠标移动时
+					var evt=evt||window.event;
+					var yy=evt.clientY;
+					var xx=evt.clientX;
+					console.log(yy);console.log(xx);
+					
+					oDiv.style.top=yy-y+"px";
+					oDiv.style.left=xx-x+"px";
+					
+				}
+				
+				document.onmouseup=function(){
+				 document.onmousemove = null;
+                 oDiv.onmouseup = null;
+			    }
+			}
+			
+			
+		</script>
+	</body>
+<ml>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="box" title="ddd" name="aaa"><em>ssss</em></div>
+		
+		
+		<script type="text/javascript">
+			
+			//元素节点获取
+			var odiv=document.getElementsByTagName("div")[0];
+			//属性节点获取     （无法获取自定义属性）
+			console.log(odiv.title);
+			console.log(odiv.name);
+
+			console.log(odiv.className);
+			//文本节点获取
+			console.log(odiv.innerHTML);  //获取全部内容   识别里面的标签
+			console.log(odiv.innerText);  //获取文本内容   不识别里面的标签
+			
+			
+			odiv.innerHTML="<a href='#'>bbbb</a>";
+            //odiv.innerText="<a href='#'>bbbb</a>";
+			//获取指定属性的值   getAttribute()
+			console.log(odiv.getAttribute("name"));
+			//设置指定属性的值   setAttribute("属性名","属性值")
+			odiv.setAttribute("bb","nn");
+			//移除属性     removeAttribute();
+			odiv.removeAttribute("bb");
+			
+		</script>
+
+	</body>
+</html>

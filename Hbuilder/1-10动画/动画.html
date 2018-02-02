@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px; height: 100px;
+				background: pink;
+				/*display: none;*/
+				left: 100px;
+				top: 100px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<button>按钮</button>
+		<div></div>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//动画
+//			$("button").bind("click",function(){
+//				$("div").animate({
+//					"width":"300px",
+//					"height":"300px",
+//					"left":"300px",
+//					"top":"300px"
+//				},2000,function(){
+//					alert("1")
+//				})
+//			})
+				$("button").bind("click",function(){
+					$("div").animate({"width":"300px"},2000)
+					$("div").animate({"height":"300px"},2000)
+				})
+		</script>
+	</body>
+</html>

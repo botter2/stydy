@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px; height: 100px;
+				background: pink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button>按钮</button>
+		<div></div>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//淡出   fadeOut()
+//			$("button").bind("click",function(){
+//				$("div").fadeIn(2000)
+//			})
+			//淡入  fadeIn()
+//			$("button").bind("click",function(){
+//				$("div").fadeOut(1000)
+//			})
+			//淡入淡出    fadeToggle()
+//			$("button").bind("click",function(){
+//				$("div").fadeToggle(2000,function(){
+//					alert("亮瞎你的狗眼")
+//				})
+//			})
+			
+			//半透明  fadeTo
+			$("button").bind("click",function(){
+				$("div").fadeTo(2000,0.5,function(){
+					alert("1")
+				})
+			})
+		</script>
+	</body>
+</html>

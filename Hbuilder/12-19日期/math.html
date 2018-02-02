@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*div{
+				width: 100px;
+				height: 20px;
+				border: 1px solid #ccc;
+				float: left;
+			}*/
+		</style>
+	</head>
+	<body>
+		<!--<div>1234</div>
+		<input type="button"  value="开始">-->
+		<script type="text/javascript">
+//			var div=document.getElementsByTagName("div")[0];
+//			var start=document.getElementsByTagName("input")[0];
+////			var random;
+//			start.onclick=function(){
+//				div.innerHTML=parseInt((Math.random()*10000))
+//			} 
+//			var div=document.getElementsByTagName("div")[0];
+//			div.innerHTML=parseInt(Math.random()*10)+""+parseInt(Math.random()*10)+""+parseInt(Math.random()*10)+""+parseInt(Math.random()*10);
+//			var start=document.getElementsByTagName("input")[0];
+//			start.onclick=function(){
+//			div.innerHTML=parseInt(Math.random()*10)+""+parseInt(Math.random()*10)+""+parseInt(Math.random()*10)+""+parseInt(Math.random()*10);
+//				
+//			}
+			
+//			function setMyDate(data,n){
+//				var a=data.getDate();
+//				var c=data.setDate(a+n);
+//				var e=new Date(c);
+//				return e;
+//			}
+//			alert(setMyDate(new Date("2017-12-20"),10));
+//			
+//			
+			function mySetDate(n, date) {  //设置当前日期
+		 	var year = date.getFullYear();  //设置当前年份
+		 	var month = date.getMonth() + 1; //获取当前月份
+		 	var day = date.getDate();    //获取当前日期
+		 	if(n != 0) {
+		 		var theMonthDay = 31;//每个月的天数
+		 		if(month == 2) {
+		 			theMonthDay =(year%4==0 && year%100!=0) || year%400==0 ? 29 : 28;
+		 		} else if(month == 4 || month==6 || month==9 || month==11){
+		 			theMonthDay == 30
+		 		}
+		 		//判断n天后的日期是否还在当前月份, 如果是则只需要改变天, 年月不用改
+		 		if(day+n<=theMonthDay) {
+		 			day += n;
+		 		} else {
+		 			//否则, 进入下个月份继续计算
+		 			month++;
+		 			n -= theMonthDay - day;
+		 			day = n;
+		 			if(month > 12) {
+		 				year++;
+		 				month = 1;
+		 			}
+		 		}
+		 	}
+//
+//		// 	//得到n天后的年月日的日期
+		 	return year+"-"+month+"-"+day;
+		 }
+		 alert(mySetDate(7,new Date()));
+		 alert(mySetDate(7,new Date("2016-8-24")));
+		 alert(mySetDate(7,new Date("2016-8-29")));
+
+						
+			
+
+//			var a=new Date(prompt("请输入日期"));
+//			var b=a.setDate(parseInt(prompt("请输入天数"))+parseInt(a.getDate()));
+//			var b=parseInt(prompt("请输入天数"));
+//			function sum(x,z){
+//				var c=b+parseInt(a.getDate());
+//				var d=new Date(a.setDate(c));
+//				alert(d);
+//			}
+//			sum(a,b);
+			
+		//Math对象: 用于执行数学任务
+		// round()四舍五入
+//		 alert(Math.round(3.1));
+//		alert(Math.round(9.5));
+//		parseInt(Math.random()*10000)
+//		// random()返回 0 ~ 1 之间的随机数。
+////		 alert(Math.random()*10);
+//		alert(Math.random());
+//
+//		// Math.max(a,b,...,x,y) -- 返回数个数字中较大的值 
+//		// 如果max函数没有给出任何参数，返回-Infinity
+//		// 如果有NaN或者非数字类型的参数，返回NaN
+//		//最大值
+////		 alert(Math.max(3, 5, "aa", 9, 2));
+//		 alert(Math.max(3,6,7,8,9,2,4));
+//
+//		// Math.min()最小值//如果min函数没有给出任何参数，返回Infinity
+//		// alert(Math.min(3, 2, 4));
+//		   alert(Math.min(1,2,4,5,6,7,3,3));
+//		// Math.abs()绝对值
+//		// alert(Math.abs(-3));
+//			alert(Math.abs(2));
+//		// Math.ceil()向上取整(大)
+//		// alert(Math.ceil(1.1));
+//			alert(Math.ceil(1.2));
+//		// Math.floor()向下取整
+//		// alert(Math.floor(1.6));
+//			alert(Math.floor(1.4));
+//		// Math.pow(x,y)返回 x 的 y 次幂。
+//		// alert(Math.pow(2, 5));
+//			alert(Math.pow(2,4))
+//		//开根号
+//		// alert(Math.sqrt(16));
+//			alert(Math.sqrt(9))
+//			
+			
+			
+		</script>
+	</body>
+</html>

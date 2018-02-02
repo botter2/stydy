@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0; padding: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div");
+			var url="new_file.json";
+
+			ajax.get(url,function(str){
+				
+//				var str=eval("("+str+")");
+				var str=JSON.parse(str);
+				for (var i=0;i<oDiv.length;i++) {
+					var img=document.createElement("img");
+					img.src=str.list[i].img;
+//					console.log(oImg.src)
+					oDiv[i].appendChild(img);
+			
+				}
+		
+			})
+			
+			
+		</script>
+		<!--<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div")[0];
+			var url="new_file.json";
+			ajax.get(url,function(str){
+				var str=eval("("+str+")");
+//				console.log(str);
+				oDiv.innerHTML=str.xinxi[1].age
+			})
+		</script>-->
+	</body>
+</html>

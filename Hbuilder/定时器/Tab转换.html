@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,li{list-style: none;}
+			
+			.top{
+				width: 300px;
+				height: 30px;
+				border: 3px solid #ccc;
+				margin: 0 auto;
+			}
+			.top li{
+				float: left;
+				width: 149px;
+				height: 30px;
+				border-right: 1px solid #ccc;
+			}
+			.bottom{
+				width: 300px;
+				height: 300px;
+				border: 3px solid #ccc;
+				margin: 0 auto;
+			}
+			.bottom li{
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="top">
+			<li style="background: red;">第一个</li>
+			<li style="background: yellow">第二个</li>
+		</ul>
+		<ul class="bottom">
+			<li style="background: red;">点击第二个</li>
+			<li style="background: yellow; display: none;">点击第一个</li>
+		</ul>
+		<script type="text/javascript">
+//			var oLi1=document.getElementsByTagName("li")[0];
+//			var oLi2=document.getElementsByTagName("li")[1];
+//			var oLi3=document.getElementsByTagName("li")[2];
+//			var oLi4=document.getElementsByTagName("li")[3];
+//			oLi1.onclick=function(){
+//				oLi3.style.display="block";
+//				oLi4.style.display="none";
+//			}
+//			oLi2.onclick=function(){
+//				oLi4.style.display="block";
+//				oLi3.style.display="none";
+//			}
+			var oli1=document.getElementsByTagName("li")[0];
+			var oli2=document.getElementsByTagName("li")[1];
+			var oli3=document.getElementsByTagName("li")[2];
+			var oli4=document.getElementsByTagName("li")[3];
+			oli1.onclick=function(){
+				oli3.style.display="block";
+				oli4.style.display="none";
+			}
+			oli2.onclick=function(){
+				oli4.style.display="block";
+				oli3.style.display="none";
+			}
+		</script>
+
+	</body>
+</html>

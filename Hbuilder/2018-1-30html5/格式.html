@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: #000;
+			}
+			#canvas{
+				background: white;
+			}
+		</style>
+	</head>
+	<body>
+		<!--canvas   画布-->   
+		
+		<canvas id="canvas" width="400" height="400"></canvas>
+	</body>
+	<script type="text/javascript">
+		var oc=document.querySelector("#canvas")  //绘制2D环境
+		var oGc=oc.getContext("2d");    //绘制环境	
+//		rect();  绘制方块
+		
+		oGc.beginPath();
+		oGc.fillStyle="aqua";
+		oGc.lineWidth='5';
+		oGc.strokeStyle='pink';
+		oGc.lineJoin="bevel";   //改变边框形状   ！！！！！！！！！！！
+		 oGc.rect(50,50,100,100); 
+		 oGc.closePath();
+		 oGc.fill();
+		 oGc.stroke();
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* 获取样式和设置样式 所需的 */ 
+				.high{ 
+				 font-weight:bold; /* 粗体字 */ 
+				 color : red; /* 字体颜色设置为红色*/ 
+				} 
+				/* 追加样式 所需的 */ 
+				.another{ 
+				 font-style:italic; /* 斜体 */
+				 color:blue; /* 字体颜色设置蓝色*/ 
+				} 
+		</style>
+	</head>
+	<body>
+		<button>追加class类</button>
+		<p class="one">你最喜欢的水果是?</p>
+		<p class="one">你最喜欢的水果是?</p>
+		<ul>
+			<li>苹果</li>
+			<li class="a">橘子</li>
+			<li class="a">香蕉</li>
+		</ul>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			1.获取样式和设置样式
+//		<p class="one" title="选择你最喜欢的水果." >你最喜欢的水果是?</p> 
+		var p_class = $("p").attr("class"); //获取<p>元素的 class s
+//		用attr()方法设置p元素的class;
+//		$("p").attr("class","high"); //设置<p>元素的 class 为“high”
+
+//		2)追加样式;
+//		addClass()
+		$("p").addClass("high"); //给<p>元素追加“another”类
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<ul class="ooo">
+			<li class="one">苹果</li>
+			<li class="two">苹果</li>
+			<li class="three">苹果</li>
+			<li class="four">苹果</li>
+		</ul>
+	</body>
+	<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//遍历            children();
+//		var $li=$("ul").children();
+//		console.log($li.length)
+
+//		next()
+		var $li=$(".ooo>li").eq(2);
+//		console.log($li.next());    //上元素
+//		console.log($li.prev());	//下元素
+//		console.log($li.siblings());//全部亲兄弟
+
+//		var a= $(".two").closest("ul");
+//		console.log(a);
+//		var b= $(".two").closest("ul");
+//		console.log(b);
+//		
+//		parent();
+//		var two=$(".two").parent();
+//		console.log(two);
+//		
+//		parents();
+//		var two=$(".two").parents();
+//		console.log(two);
+		
+		//修改样式
+		$(".one").css({"background":"blue","font-size":"26px"})
+		$(".one").width(300).height(300);
+		
+
+	</script>
+</html>
